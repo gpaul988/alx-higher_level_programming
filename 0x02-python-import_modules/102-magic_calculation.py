@@ -1,7 +1,6 @@
 #!/usr/bin/python3
-# Graham S. Paul (102-magic_calculation.py)
 def magic_calculation(a, b):
-    """Tie bytecode given by Holberton School."""
+    """Tie bytecode given by Holbertton School."""
     from magic_calculation_102 import add, sub
     if a < b:
         c = add(a, b)

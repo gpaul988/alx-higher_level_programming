@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+# Graham S. Paul (102-magic_calculation.py)
 def magic_calculation(a, b):
     """Tie bytecode given by Holbertton School."""
     from magic_calculation_102 import add, sub
@@ -8,4 +9,4 @@ def magic_calculation(a, b):
             c = add(c, i)
             return (c)
     else:
-        return(sub(a, b))
+        return (sub(a, b))

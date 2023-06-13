@@ -1,58 +1,66 @@
-#include "lists.h"
+#include <stdio.h>
 #include <stdlib.h>
+#include "lists.h"
 
 /**
-* reverse_array - Returns content of an array of integers
-* @a: Int array to return
-* @n: Number elements in array
+* reverse_listint – returns a connected list
+* @head: Redirects to head of list
 *
-* Return: Integrated string
+* Return: Redirects to new head of returned list
 */
-
-void reverse_array(int *a, int n)
+listint_t *reverse_listint(listint_t **head)
 {
-int *begin = a;
-int *end;
-int hold = 0;
+listint_t *prev = NULL;
+listint_t *current = *head;
+listint_t *next = NULL;
 
-end = a + n - 1;
-for (; begin < end; begin++, end--)
+while (current != NULL)
 {
-hold = *end;
-*end = *begin;
-*begin = hold;
+next = current->next;
+current->next = prev;
+prev = current;
+current = next;
 }
+
+*head = prev;
+return (*head);
 }
 
 /**
-* is_palindrome - Reverses 1, if palindrome, 0 if not
-* @head: Connected list
+* is_palindrome - Inspect if singly connected list is a palindrome
+* @head: Redirect to head of the list
 *
-* Return: Reverses 1, if palindrome, 0 if not
+* Return: 1 if list is palindrome, 0 O/W
 */
-
 int is_palindrome(listint_t **head)
 {
-int size, *list, *rev;
-listint_t *copy = *head;
+listint_t *slow = *head;
+listint_t *fast = *head;
+listint_t *mid = NULL;
+listint_t *second_half = NULL;
 
-if (!head || !copy)
-return (0);
-if (!copy->next)
+if (*head == NULL || (*head)->next == NULL)
 return (1);
-
-list = malloc(sizeof(int *));
-if (!list)
+while (fast != NULL && fast->next != NULL)
+{
+fast = fast->next->next;
+mid = slow;
+slow = slow->next;
+}
+if (fast != NULL)
+{
+mid = slow;
+slow = slow->next;
+}
+second_half = slow;
+mid->next = NULL;
+reverse_listint(&second_half);
+while (*head != NULL && second_half != NULL)
+{
+if ((*head)->n != second_half->n)
 return (0);
-rev = malloc(sizeof(int *));
-if (!rev)
-return (0);
-for (size = 0; copy; copy = copy->next, size++)
-list[size] = copy->n;
-
-list = rev;
-reverse_array(rev, size);
-if (list == rev)
+*head = (*head)->next;
+second_half = second_half->next;
+}
 return (1);
-return (0);
 }

@@ -1,13 +1,9 @@
 #!/usr/bin/python3
 # Graham S. Paul (4-new_in_list.py)
 def new_in_list(my_list, idx, element):
-    if idx < 0:
-        return my_list
-    elif idx > len(my_list) - 1:
-        return my_list
-    else:
-        new_list = []
-        for i in my_list:
-                new_list.append(i)
+    new_list = [i for i in my_list]
+
+    if idx < len(new_list) and idx > -1:
         new_list[idx] = element
         return new_list
+    return new_list

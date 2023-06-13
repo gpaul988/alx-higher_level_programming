@@ -1,9 +1,8 @@
 #!/usr/bin/python3
-# Graham S. Paul (2-replace_in_list.py)
+# Graham s. Paul (2-replapce_in_list.py)
 
-"""Return element of list fixed position"""
 def replace_in_list(my_list, idx, element):
-    if idx < len(my_list) and idx > -1:
+    """change an element of a list at a specific location"""
+    if idx >= 0 and idx < len(my_list):
         my_list[idx] = element
-        return my_list
     return my_list

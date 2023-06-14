@@ -1,8 +1,6 @@
 #!/usr/bin/python3
 # Graham S. Paul (1-search_replace.py)
-def square_matrix_simple(matrix=[]):
-    ret = []
-    for i in range(len(matrix)):
-        ret.append(list(map(lambda x: x ** 2, matrix[i])))
 
-    return ret
+def search_replace(my_list, search, replace):
+    new_list = list(map(lambda x: replace if x == search else x, my_list))
+    return (new_list)

@@ -6,4 +6,7 @@ Hold class Rectangle
 
 
 class Rectangle():
+    """
+    Explains class rectangle
+    """
     pass

@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 # Graham S. Paul (2-rectangle.py)
 """
-Holds a rectangle class with a secured attribute width and height
+Holds a rectangle class
 """
 
 
@@ -48,6 +48,4 @@ class Rectangle:
 
     def perimeter(self):
         """ Reverses 2*width + 2*height or reverss if width or height is 0 """
-        if self.__width == 0 or self.__height == 0:
-            return 0
-        return (2 * self.__width) + (2 * self.height)
+        return 2 * (self._width + self._height)

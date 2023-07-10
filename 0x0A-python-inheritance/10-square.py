@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+# Graham S. Paul (10-square.py)
 """
 This module defines the Square class that inherits from Rectangle.
 """

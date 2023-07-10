@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 # Graham S. Paul (10-square.py)
 """
-This module defines the Square class that inherits from Rectangle.
+Holds rear class BaseGeometry
 """
 
 Rectangle = __import__('9-rectangle').Rectangle
@@ -9,12 +9,12 @@ Rectangle = __import__('9-rectangle').Rectangle
 
 class Square(Rectangle):
     """
-    Represents a square.
+    Constitute a square.
     """
 
     def __init__(self, size):
         """
-        Initializes a Square instance.
+        Boots a Square instance.
 
         Args:
             size (int): The size of the square.
@@ -25,9 +25,9 @@ class Square(Rectangle):
 
     def __str__(self):
         """
-        Returns a string representation of the Square instance.
+        Retrieves a string constitution of the Square example.
 
-        Returns:
-            str: The string representation of the Square.
+        Retrieves:
+            str: String constitution of the Square.
         """
         return "[Square] {}/{}".format(self.__size, self.__size)

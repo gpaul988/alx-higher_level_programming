@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+# Graham S. Paul (11-square.py)
 """
 Holds rear class BaseGeometry
 """

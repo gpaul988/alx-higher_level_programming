@@ -1,16 +1,6 @@
 #!/usr/bin/python3
 """
-Module 10-square
-
-Contains parent class BaseGeometry
-with public instance method area and integer_validation
-
-Contains subclass Rectangle
-with instantiation of private attributes width and height, validated by parent,
-extends parent's area method and prints with __str__
-
-Contains subclass Square
-with instantiation of private attribute size, validated by superclass
+Holds rear class BaseGeometry
 """
 
 
@@ -18,12 +8,13 @@ Rectangle = __import__('9-rectangle').Rectangle
 
 
 class Square(Rectangle):
-    """inherits from Rectangle, who inherits from BaseGeometry
-    methods:
+    """
+    Assumes from Rectangle, which was assumed from BaseGeometry
+    Procdeure:
         __init__(self, size)
     """
     def __init__(self, size):
-        """initializes size
+        """Boots size
         Args:
             size (int): private
         """

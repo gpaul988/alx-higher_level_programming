@@ -1,23 +1,32 @@
 #!/usr/bin/python3
 """
-Holds rear class BaseGeometry
+This module defines the Square class that inherits from Rectangle.
 """
-
 
 Rectangle = __import__('9-rectangle').Rectangle
 
 
 class Square(Rectangle):
     """
-    Assumes from Rectangle, which was assumed from BaseGeometry
-    Procdeure:
-        __init__(self, size)
+    Represents a square.
     """
+
     def __init__(self, size):
-        """Boots size
+        """
+        Initializes a Square instance.
+
         Args:
-            size (int): private
+            size (int): The size of the square.
         """
         self.integer_validator("size", size)
-        super().__init__(size, size)
         self.__size = size
+        super().__init__(size, size)
+
+    def __str__(self):
+        """
+        Returns a string representation of the Square instance.
+
+        Returns:
+            str: The string representation of the Square.
+        """
+        return "[Square] {}/{}".format(self.__size, self.__size)

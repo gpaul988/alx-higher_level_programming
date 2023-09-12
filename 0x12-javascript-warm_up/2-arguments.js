@@ -1,5 +1,4 @@
 #!/usr/bin/node
-// Graham S. Paul (2-arguments.js
 
 if (process.argv.length <= 2) {
   console.log('No argument');

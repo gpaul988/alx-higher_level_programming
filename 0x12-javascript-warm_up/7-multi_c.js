@@ -1,13 +1,13 @@
 #!/usr/bin/node
-// Graham S. Paul (7-multi.js)
+// Graham S. PAul (7-multi_c.js)
+// prints 3 lines: (like 1-multi_languages.js)
 
-const Error = 'Missing number of occurrences';
+const lang = 'C is fun';
 
-const num = Math.floor(+process.argv[2]);
-f (isNaN(num)) {
-  console.log(Error);
+if (isNaN(process.argv[2])) {
+  console.log('Missing number of occurrences');
 } else {
-  for (let i = 0; i < num; i++) {
-    console.log('C is fun');
+  for (let i = 0; i < parseInt(process.argv[2]); i++) {
+    console.log(lang);
   }
 }

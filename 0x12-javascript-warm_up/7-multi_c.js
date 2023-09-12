@@ -1,5 +1,6 @@
 #!/usr/bin/node
 // Graham S. Paul (7-multi.js)
+
 const Error = 'Missing number of occurrences';
 
 const num = Math.floor(+process.argv[2]);

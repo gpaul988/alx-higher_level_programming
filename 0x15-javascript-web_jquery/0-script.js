@@ -1,2 +1,2 @@
-// Graham S. Paul (0-script.js)
+// Graham S. Paul ( 0-script.js )
 document.querySelector('header').style.color = '#FF0000';
